@@ -41,6 +41,31 @@ class Blackjack
                     break;
                 }
             }
+            while (GetHandErtek(osztoLap) < 17)
+            {
+                osztoLap.Add(HuzottLap(kartyak));
+            }
+
+            Console.WriteLine($"\nDealer's hand: {string.Join(", ", osztoLap)}");
+            int playerErtek = GetHandErtek(jatekosLap);
+            int dealerErtek = GetHandErtek(osztoLap);
+
+            if (playerErtek > 21 || (dealerErtek <= 21 && dealerErtek >= playerErtek))
+            {
+                Console.WriteLine("\nYou lost!");
+                Console.WriteLine("~~~~~~~~~\n");
+                penz -= tet;
+            }
+            else
+            {
+                Console.WriteLine($"\nYou won ${tet}!");
+                Console.WriteLine($"~~~~~~~~~~~~~~~\n");
+                penz += tet;
+            }
+        }
+
+        Console.WriteLine("You're broke! Thanks for playing!");
+    }
         }
         
     }

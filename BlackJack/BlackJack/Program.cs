@@ -23,7 +23,26 @@ class Blackjack
 
             Console.WriteLine($"\nDealer's visible card: {osztoLap[1]}");
             Console.WriteLine($"\nYour cards: {string.Join(", ", jatekosLap)}");
+
+            while (GetHandErtek(jatekosLap) <= 21)
+            {
+                Console.Write("\n[H]it or [S]tand : ");
+                char move = Console.ReadKey().KeyChar;
+                Console.WriteLine();
+
+                if (move == 'H' || move == 'h')
+                {
+                    jatekosLap.Add(HuzottLap(kartyak));
+                    Console.WriteLine($"\nYou drew: {jatekosLap[jatekosLap.Count - 1]}");
+                    Console.WriteLine($"Your hand: {string.Join(",",jatekosLap)}");
+                }
+                else if (move == 'S' || move == 's')
+                {
+                    break;
+                }
+            }
         }
+        
     }
     static int GetBet(int maxTet)
     {

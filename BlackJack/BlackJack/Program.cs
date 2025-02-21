@@ -63,4 +63,13 @@ class Blackjack
         kartyak = Keveres(kartyak);
         return kartyak;
     }
+
+    static string HuzottLap(List<string> kartyak)
+    {
+        string card = kartyak[0];
+        kartyak.RemoveAt(0);
+        return card;
+    }
 }
+
+

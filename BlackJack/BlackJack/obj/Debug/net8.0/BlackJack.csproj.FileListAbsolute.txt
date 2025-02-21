@@ -1,0 +1,15 @@
+X:\Suli\BlackJack\BlackJack\bin\Debug\net8.0\BlackJack.exe
+X:\Suli\BlackJack\BlackJack\bin\Debug\net8.0\BlackJack.deps.json
+X:\Suli\BlackJack\BlackJack\bin\Debug\net8.0\BlackJack.runtimeconfig.json
+X:\Suli\BlackJack\BlackJack\bin\Debug\net8.0\BlackJack.dll
+X:\Suli\BlackJack\BlackJack\bin\Debug\net8.0\BlackJack.pdb
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\BlackJack.GeneratedMSBuildEditorConfig.editorconfig
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\BlackJack.AssemblyInfoInputs.cache
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\BlackJack.AssemblyInfo.cs
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\BlackJack.csproj.CoreCompileInputs.cache
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\BlackJack.sourcelink.json
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\BlackJack.dll
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\refint\BlackJack.dll
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\BlackJack.pdb
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\BlackJack.genruntimeconfig.cache
+X:\Suli\BlackJack\BlackJack\obj\Debug\net8.0\ref\BlackJack.dll

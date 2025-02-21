@@ -41,6 +41,7 @@ class Blackjack
                     break;
                 }
             }
+
             while (GetHandErtek(osztoLap) < 17)
             {
                 osztoLap.Add(HuzottLap(kartyak));
@@ -66,9 +67,7 @@ class Blackjack
 
         Console.WriteLine("You're broke! Thanks for playing!");
     }
-        }
-        
-    }
+
     static int GetBet(int maxTet)
     {
         int tet;
@@ -79,17 +78,6 @@ class Blackjack
         return tet;
     }
 
-    static List<string> Keveres(List<string> kartyak)
-    {
-        for (int i = kartyak.Count - 1; i > 0; i--)
-        {
-            int j = random.Next(i + 1);
-            (kartyak[i], kartyak[j]) = (kartyak[j], kartyak[i]);
-        }
-        return kartyak;
-    }
-
-
     static List<string> GetDeck()
     {
         List<string> kartyak = new List<string>();
@@ -97,6 +85,16 @@ class Blackjack
             foreach (var rank in ranks)
                 kartyak.Add($"{rank}{suit}");
         kartyak = Keveres(kartyak);
+        return kartyak;
+    }
+
+    static List<string> Keveres(List<string> kartyak)
+    {
+        for (int i = kartyak.Count - 1; i > 0; i--)
+        {
+            int j = random.Next(i + 1);
+            (kartyak[i], kartyak[j]) = (kartyak[j], kartyak[i]);
+        }
         return kartyak;
     }
 
@@ -126,5 +124,3 @@ class Blackjack
         return value;
     }
 }
-
-

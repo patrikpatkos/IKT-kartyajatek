@@ -17,6 +17,12 @@ class Blackjack
         {
             Console.WriteLine($"Money: {penz}");
             int tet = GetBet(penz);
+            List<string> kartyak = GetDeck();
+            List<string> osztoLap = new List<string> { HuzottLap(kartyak), HuzottLap(kartyak) };
+            List<string> jatekosLap = new List<string> { HuzottLap(kartyak), HuzottLap(kartyak) };
+
+            Console.WriteLine($"\nDealer's visible card: {osztoLap[1]}");
+            Console.WriteLine($"\nYour cards: {string.Join(", ", jatekosLap)}");
         }
     }
     static int GetBet(int maxTet)
@@ -27,5 +33,15 @@ class Blackjack
             Console.Write("Enter your bet (1 - 5000): ");
         } while (!int.TryParse(Console.ReadLine(), out tet) || tet < 1 || tet > maxTet);
         return tet;
+    }
+
+    static List<string> GetDeck()
+    {
+        List<string> kartyak = new List<string>();
+        foreach (var suit in suits)
+            foreach (var rank in ranks)
+                kartyak.Add($"{rank}{suit}");
+        kartyak = Keveres(kartyak);
+        return kartyak;
     }
 }

@@ -79,6 +79,17 @@ class Blackjack
         return tet;
     }
 
+    static List<string> Keveres(List<string> kartyak)
+    {
+        for (int i = kartyak.Count - 1; i > 0; i--)
+        {
+            int j = random.Next(i + 1);
+            (kartyak[i], kartyak[j]) = (kartyak[j], kartyak[i]);
+        }
+        return kartyak;
+    }
+
+
     static List<string> GetDeck()
     {
         List<string> kartyak = new List<string>();

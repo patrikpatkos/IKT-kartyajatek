@@ -17,17 +17,15 @@ class Blackjack
         {
             Console.WriteLine($"Money: {penz}");
             int tet = GetBet(penz);
-
-
-            static int GetBet(int maxTet)
-            {
-                int tet;
-                do
-                {
-                    Console.Write("Enter your bet (1 - 5000): ");
-                } while (!int.TryParse(Console.ReadLine(), out tet) || tet < 1 || tet > maxTet);
-                return tet;
-            }
         }
+    }
+    static int GetBet(int maxTet)
+    {
+        int tet;
+        do
+        {
+            Console.Write("Enter your bet (1 - 5000): ");
+        } while (!int.TryParse(Console.ReadLine(), out tet) || tet < 1 || tet > maxTet);
+        return tet;
     }
 }

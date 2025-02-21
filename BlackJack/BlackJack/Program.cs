@@ -106,6 +106,25 @@ class Blackjack
         kartyak.RemoveAt(0);
         return card;
     }
+
+    static int GetHandErtek(List<string> hand)
+    {
+        int value = 0, aceCount = 0;
+        foreach (var card in hand)
+        {
+            string rank = card.Substring(0, card.Length - 1);
+            if (rank == "A") aceCount++;
+            else if ("JQK".Contains(rank)) value += 10;
+            else value += int.Parse(rank);
+        }
+        value += aceCount;
+        while (aceCount > 0 && value + 10 <= 21)
+        {
+            value += 10;
+            aceCount--;
+        }
+        return value;
+    }
 }
 
 
